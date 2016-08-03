@@ -17,9 +17,8 @@ composer require megadevelop/php-megalogger-client
 ```
 use LoggerClients\LoggerClient;
 
-$loggerClient = new LoggerClient();
 $apiKey = "asfkjewf46388asfafsf_megaToken";
-$token = $loggerClient->generateToken(apiKey);
+$loggerClient = new LoggerClient($apiKey);
 
 // Get level: info, debug, warning, error, critical
 $levelObj = new Level();
@@ -29,7 +28,7 @@ $source = 'source_log';
 $data = array("message" => "Message attachment token");
 //push log 
 
-$response = $loggerClient->pushLog($token, $level, $data, $source);
+$response = $loggerClient->pushLog($level, $data, $source);
 echo '<pre>';
 print_r($response);
 echo '</pre>';
