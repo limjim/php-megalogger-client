@@ -1,16 +1,16 @@
 <?php
 
 namespace LoggerClients;
-use \Emarref\Jwt\Claim;
+use Emarref\Jwt\Claim;
 
 class LoggerClient {
 
     public function generateToken($apiKey) {
-        $token = new \Emarref\Jwt\Token();
+        $token = new Emarref\Jwt\Token();
         $token->addClaim(new Claim\Audience([$apiKey]));
-        $jwt = new \Emarref\Jwt\Jwt();
-        $algorithm = new \Emarref\Jwt\Algorithm\HS512('megadev_secret');
-        $encryption = \Emarref\Jwt\Encryption\Factory::create($algorithm);
+        $jwt = new Emarref\Jwt\Jwt();
+        $algorithm = new Emarref\Jwt\Algorithm\HS512('megadev_secret');
+        $encryption = Emarref\Jwt\Encryption\Factory::create($algorithm);
         $serializedToken = $jwt->serialize($token, $encryption);
         return $serializedToken;
     }
@@ -53,7 +53,7 @@ class LoggerClient {
     }
 
     private static function _http() {
-        return new \LoggerClients\Http\Http();
+        return new LoggerClients\Http\Http();
     }
 
 }
