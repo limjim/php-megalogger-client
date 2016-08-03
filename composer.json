@@ -1,0 +1,21 @@
+{
+    "name": "megadevelop/php-megalogger-client",
+    "description": "Client lib off megalogger",
+    "keywords": ["megalogger client", "megadevelop", "megalogger"],
+    "license": "MEGA",
+    "authors": [
+        {
+            "name": "Mega dev team",
+            "homepage": "http://megaads.vn"
+        }
+    ],
+    "require": {
+        "php": ">=5.4",
+        "emarref/jwt": "1.0.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "php-megalogger-client\\MegaLogger\\": "src/"
+        }
+    }
+}
