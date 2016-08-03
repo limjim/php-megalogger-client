@@ -15,7 +15,7 @@
     },
     "autoload": {
         "psr-4": {
-            "php-megalogger-client\\MegaLogger\\": "src/"
+            "LoggerClients\\": "src/LoggerClients"
         }
     }
 }
