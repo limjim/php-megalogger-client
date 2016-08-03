@@ -1,4 +1,4 @@
-# megadevelop
+# php megalogger client
 
 ##Installation:
 ```javascript
