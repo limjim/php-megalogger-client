@@ -65,7 +65,7 @@ class LoggerClient {
     }
 
     private static function _http() {
-        return new LoggerClients\Http\Http();
+        return new \LoggerClients\Http\Http();
     }
 
 }
