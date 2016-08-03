@@ -1,7 +1,9 @@
 # megadevelop
 
 ##Installation:
-**composer require megadevelop/php-megalogger-client**
+```javascript
+composer require megadevelop/php-megalogger-client**
+```
 ###OR
 **add in file composer.json**
 ```javascript
