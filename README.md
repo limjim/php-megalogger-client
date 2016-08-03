@@ -1,16 +1,18 @@
 # megadevelop
 
-Installation:
-composer require megadevelop/php-megalogger-client
-OR
-add in file composer.json
+##Installation:
+**composer require megadevelop/php-megalogger-client**
+###OR
+**add in file composer.json**
+```javascript
 "require": {
 	"megadevelop/php-megalogger-client":"dev-master"
 }
+```
+##Usage:
+**Create an instance of the LoggerClients\LoggerClient class**
 
-Usage:
-Create an instance of the LoggerClients\LoggerClient class
-
+```
 use LoggerClients\LoggerClient;
 
 $loggerClient = new LoggerClient();
@@ -29,7 +31,7 @@ $response = $loggerClient->pushLog($token, $level, $data, $source);
 echo '<pre>';
 print_r($response);
 echo '</pre>';
-
+```
 
 
 
