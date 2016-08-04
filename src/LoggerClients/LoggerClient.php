@@ -31,7 +31,7 @@ class LoggerClient {
 
                 $params = array(
                     'type' => 'request',
-                    'token' => $this->apiKey,
+                    'token' => $token,
                     'level' => $level,
                     'time' => $time,
                     'source' => $source,
@@ -55,11 +55,11 @@ class LoggerClient {
     }
 
     private function _generateToken() {
-        $token = new Emarref\Jwt\Token();
+        $token = new \Emarref\Jwt\Token();
         $token->addClaim(new Claim\Audience([$this->apiKey]));
-        $jwt = new Emarref\Jwt\Jwt();
-        $algorithm = new Emarref\Jwt\Algorithm\HS512('megadev_secret');
-        $encryption = Emarref\Jwt\Encryption\Factory::create($algorithm);
+        $jwt = new \Emarref\Jwt\Jwt();
+        $algorithm = new \Emarref\Jwt\Algorithm\HS512('megadev_secret');
+        $encryption = \Emarref\Jwt\Encryption\Factory::create($algorithm);
         $serializedToken = $jwt->serialize($token, $encryption);
         return $serializedToken;
     }
